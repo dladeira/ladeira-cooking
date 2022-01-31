@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 6vh;
+
+    padding: 0 20px;
+
+    background-color: white;
+}
+
+.brand {
+    
+    justify-self: flex-start;
+
+    margin-right: 20px;
+}
+
+.link {
+    display: block;
+
+    padding: 0 40px;
+
+    font-size: 1.5rem;
+}

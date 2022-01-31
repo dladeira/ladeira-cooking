@@ -1,0 +1,70 @@
+@import './variables.scss';
+
+.container {
+    height: calc(100% - 6vh);
+    width: 100%;
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/cooking_better.png");
+    background-position: 50% 60%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.textContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    height: 100%;
+    width: 57%;
+
+    padding-top: 3vh;
+    padding-right: 14%;
+
+    background-image: url("/overlay.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    color: black;
+}
+
+.title {
+    margin: 0;
+
+    font-size: 5rem;
+    font-weight: 600;
+}
+
+.description {
+    margin: 0;
+    margin-top: 10px;
+
+    font-size: 2rem;
+}
+
+.logo {
+    position: relative;
+
+    margin-top: 10vh;
+    margin-bottom: 13vh;
+
+    height: 300px;
+    width: 300px;
+}
+
+.button {
+    padding: 10px 30px;
+
+    border: 3px solid $orange;
+    border-radius: 20px;
+    
+    font-size: 3rem;
+
+    transition: background-color 200ms linear;
+}
+
+.button:hover {
+    background-color: $orange;
+    color: white;
+}
