@@ -1,0 +1,49 @@
+@import "./variables.scss";
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    height: fit-content;
+    width: 300px;
+
+    margin: 50px;
+    padding: 20px 20px;
+
+    background-color: white;
+}
+
+.image {
+    height: fit-content;
+
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    width: 100%;
+}
+
+.button {
+    width: 90%;
+
+    margin: 0 auto;
+    margin-top: 20px;
+    padding: 5px 20px;
+
+    border: 2px solid $orange;
+    border-radius: 5px;
+    
+    font-size: 1.5rem;
+    text-align: center;
+
+    transition: background-color 200ms linear;
+}
+
+.button:hover {
+    background-color: $orange;
+    color: white;
+}
