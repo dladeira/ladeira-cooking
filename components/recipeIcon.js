@@ -8,7 +8,7 @@ function Component({ name, iconPath }) {
         <div className={styles.container}>
             <div className={styles.image}><Image src={iconPath} alt={name} height={260} width={260} /></div>
             <div className={styles.title}>{name}</div>
-            <div className={styles.button}><Link href="/recipes">View</Link></div>
+            <Link href="/recipes"><a className={styles.button}>View</a></Link>
         </div>
     )
 }

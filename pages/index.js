@@ -16,7 +16,7 @@ function Jumbotron({ title, description }) {
                 <h1 className={styles.title}>{title}</h1>
                 <p className={styles.description}>{description}</p>
                 <div className={styles.logo}><Image src="/logo.svg" layout="fill" alt="Logo" /></div>
-                <div className={styles.button}><Link href="/recipes">View Recipes</Link></div>
+                <Link href="/recipes"><a className={styles.button}>View Recipes</a></Link>
             </div>
         </div>
     )
