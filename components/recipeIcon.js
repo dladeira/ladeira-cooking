@@ -3,12 +3,12 @@ import Link from 'next/link'
 
 import styles from '../styles/recipeIcon.module.scss'
 
-function Component({ name, iconPath }) {
+function Component({ title, iconPath, id }) {
     return (
         <div className={styles.container}>
-            <div className={styles.image}><Image src={iconPath} alt={name} height={260} width={260} /></div>
-            <div className={styles.title}>{name}</div>
-            <Link href="/recipes"><a className={styles.button}>View</a></Link>
+            <div className={styles.image}><Image src={iconPath} alt={title} height={260} width={260} /></div>
+            <div className={styles.title}>{title}</div>
+            <Link href={"/recipes/" + id}><a className={styles.button}>View</a></Link>
         </div>
     )
 }

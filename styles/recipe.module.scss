@@ -1,0 +1,88 @@
+.container {
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    background-position: center;
+    background-size: cover;
+}
+
+.recipeContainer {
+    width: 70%;
+    max-width: 1000px;
+
+    margin-top: 100px;
+    padding: 20px;
+
+    background-color: white;
+}
+
+.title {
+    width: 100%;
+
+    margin: 0;
+
+    font-size: 4rem;
+    text-align: center;
+}
+
+.line {
+    height: 2px;
+    width: 80%;
+
+    margin: 10px auto;
+    margin-bottom: 40px;
+
+    background-color: darkgray;
+}
+
+.landingImage {
+    height: fit-content;
+    width: fit-content;
+
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.stepContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    height: fit-content;
+    width: 100%;
+
+    margin: 25px 0;
+}
+
+.stepContent {
+    width: 60%;
+
+    margin-left: 2.5%;
+}
+
+.stepTitle {
+    width: 60%;
+
+    margin: 10px auto;
+    margin-bottom: 40px;
+
+    font-size: 2rem;
+    text-align: center;
+}
+
+.stepText {
+    width: 100%;
+
+    font-size: 1.1rem;
+    line-height: 2.3rem;
+    text-indent: 3rem;
+}
+
+.stepImage {
+    width: 35%;
+}

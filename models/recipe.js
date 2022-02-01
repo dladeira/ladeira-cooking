@@ -1,8 +1,9 @@
 import mongoose from 'mongoose'
 
 const schema = new mongoose.Schema({
-    name: String,
     iconPath: String,
+    id: String,
+    title: String,
     content: String
 })
 
