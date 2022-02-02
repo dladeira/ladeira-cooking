@@ -17,10 +17,10 @@
     align-items: center;
 
     height: 100%;
-    width: 57%;
+    width: 57vw;
 
     padding-top: 3vh;
-    padding-right: 14%;
+    padding-right: 17vw;
 
     background-image: url("/overlay.svg");
     background-repeat: no-repeat;
@@ -32,15 +32,17 @@
 .title {
     margin: 0;
 
-    font-size: 5rem;
+    font-size: 4.2vw;
     font-weight: 600;
+    text-align: center;
 }
 
 .description {
     margin: 0;
     margin-top: 10px;
 
-    font-size: 2rem;
+    font-size: 1.7vw;
+    text-align: center;
 }
 
 .logo {
@@ -49,8 +51,8 @@
     margin-top: 10vh;
     margin-bottom: 13vh;
 
-    height: 300px;
-    width: 300px;
+    height: 16vw;
+    width: 16vw;
 }
 
 .button {
@@ -59,7 +61,7 @@
     border: 3px solid $orange;
     border-radius: 20px;
     
-    font-size: 3rem;
+    font-size: 3vw;
 
     transition: background-color 200ms linear;
 }
@@ -67,4 +69,57 @@
 .button:hover {
     background-color: $orange;
     color: white;
+}
+
+@media (max-width: $tablet-bp) {
+    .textContainer {
+        width: 50%;
+        padding-right: 0;
+
+        background-color: white;
+        background-image: none;
+    }
+
+    .title {
+        font-size: 4rem;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .button {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: $phone-bp) {
+
+    .textContainer {
+        width: 100%;
+
+        padding-top: 20px;
+        padding: 10px;
+
+        background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.6)), url("/cooking_better.png");
+    }
+
+    .title {
+        font-size: 3rem;
+    }
+
+    .description {
+        font-size: 2rem;
+    }
+
+    .logo {
+        height: 30%;
+        width: 100%;
+
+        margin-bottom: 70px;
+    }
+
+    .button {
+        font-size: 2rem;
+    }
 }
