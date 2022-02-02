@@ -44,7 +44,36 @@
     width: fit-content;
 
     margin: 0 auto;
-    margin-bottom: 100px;
+}
+
+.ingContainer {
+    width: 70%;
+
+    margin: 60px auto;
+    margin-bottom: 80px;
+    padding: 10px 20px;
+    padding-bottom: 20px;
+
+    border-top: 2px solid gray;
+    border-bottom: 2px solid gray;
+}
+
+.ingTitle {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.ings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+}
+
+.ing {
+    width: fit-content;
+    padding: 5px;
 }
 
 .stepContainer {
