@@ -53,7 +53,7 @@ function Step({ number, text, image }) {
                 <div className={styles.stepTitle}>Step {number + 1}</div>
                 <div className={styles.stepText}>{text}</div>
             </div>
-            <div className={styles.stepImage}><Image alt={"image"} src={image} height={400} width={400} /></div>
+            <div className={styles.stepImage}><Image priority={true} alt={"image"} src={image} height={400} width={400} /></div>
         </div>
     )
 }
