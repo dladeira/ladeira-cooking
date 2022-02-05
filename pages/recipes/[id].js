@@ -1,8 +1,9 @@
 import Image from 'next/image'
-import { useState, useRef, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { useCookies } from 'react-cookie'
 import dbConnect from '../../lib/dbConnect.js'
 import Recipe from '../../models/recipe.js'
+import Rating from '../../components/rating'
 
 import styles from '../../styles/recipe.module.scss'
 
@@ -18,7 +19,7 @@ function Page({ title, steps, splashPath, ingredients, id, score, reviews }) {
 function RecipeComponent({ id, title, steps, splashPath, ingredients, rating }) {
     return (
         <div className={styles.recipeContainer}>
-            <Score rating={rating} />
+            <Rating rating={rating} />
             <div className={styles.title}>{title}</div>
             <div className={styles.line} />
             <div className={styles.landingImage}><Image alt={"Icon"} src={splashPath} height={400} width={800} /></div>
@@ -30,7 +31,7 @@ function RecipeComponent({ id, title, steps, splashPath, ingredients, rating }) 
                     return <Step key={steps.indexOf(step)} number={steps.indexOf(step)} text={step.text} image={step.image} />
                 })}
             </div>
-            <Rating id={id} />
+            <Review id={id} />
         </div>
     )
 }
@@ -61,19 +62,7 @@ function Step({ number, text, image }) {
     )
 }
 
-function Score({ rating }) {
-    return (
-        <div className={styles.scoreContainer}>
-            <div className={styles.score} dangerouslySetInnerHTML={{ __html: `<i class="${(rating > 0 ? "fas" : "far")} fa-star"></i>` }} />
-            <div className={styles.score} dangerouslySetInnerHTML={{ __html: `<i class="${(rating > 1 ? "fas" : "far")} fa-star"></i>` }} />
-            <div className={styles.score} dangerouslySetInnerHTML={{ __html: `<i class="${(rating > 2 ? "fas" : "far")} fa-star"></i>` }} />
-            <div className={styles.score} dangerouslySetInnerHTML={{ __html: `<i class="${(rating > 3 ? "fas" : "far")} fa-star"></i>` }} />
-            <div className={styles.score} dangerouslySetInnerHTML={{ __html: `<i class="${(rating > 4 ? "fas" : "far")} fa-star"></i>` }} />
-        </div>
-    )
-}
-
-function Rating({ id }) {
+function Review({ id }) {
     const [cookies, setCookie] = useCookies()
     const [ghostRating, setGhostRating] = useState(0)
 
