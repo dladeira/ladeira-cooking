@@ -7,9 +7,6 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-
-    background-position: center;
-    background-size: cover;
 }
 
 .recipeContainer {
@@ -146,4 +143,59 @@
 
         margin: 10px auto;
     }
+}
+
+
+.scoreContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    font-size: 1rem;
+}
+
+.score {
+    color: black;
+}
+
+.ratingWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+
+    margin: 0 auto;
+    padding: 30px 30%;
+}
+
+.ratingContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.6rem;
+}
+
+.ratingText {
+    padding-bottom: 10px;
+
+    font-size: 1rem;
+    font-style: italic;
+    color: gray;
+}
+
+.rating {
+    @extend .score;
+
+    color: $orange;
+}
+
+.rating:hover {
+    cursor: pointer;
 }

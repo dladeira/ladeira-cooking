@@ -7,6 +7,8 @@ const schema = new mongoose.Schema({
     title: String,
     steps: Array,
     ingredients: Array,
+    score: Number,
+    reviews: Number
 })
 
 module.exports = mongoose.models.Recipe || mongoose.model("Recipe", schema)
