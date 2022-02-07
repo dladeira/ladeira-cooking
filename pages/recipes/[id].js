@@ -67,12 +67,13 @@ function Review({ id }) {
     const [ghostRating, setGhostRating] = useState(0)
 
     function onStarHover(rating) {
-        if (!cookies.rating || cookies.rating < 0)
+        console.log(cookies)
+        if (!cookies["rating-" + id] || cookies["rating-" + id] < 0)
             setGhostRating(rating)
     }
 
     function onStarClick() {
-        if (cookies.rating && cookies.rating > 0) {
+        if (cookies["rating-" + id] && cookies["rating-" + id] > 0) {
             submitRating(-ghostRating)
         } else {
             submitRating(ghostRating)
@@ -80,7 +81,7 @@ function Review({ id }) {
     }
 
     function submitRating(rating) {
-        setCookie("rating", rating, {
+        setCookie("rating-" + id, rating, {
             path: "/",
             maxAge: 100000000000,
             sameSite: true
@@ -94,11 +95,10 @@ function Review({ id }) {
     }
 
     useEffect(() => {
-        if (cookies.rating) {
-            console.log(cookies.rating)
-            setGhostRating(cookies.rating)
+        if (cookies["rating-" + id]) {
+            setGhostRating(cookies["rating-" + id])
         }
-    }, [cookies, setGhostRating])
+    }, [cookies, setGhostRating, id])
 
     return (
         <div className={styles.ratingWrapper}>
