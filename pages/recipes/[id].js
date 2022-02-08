@@ -7,18 +7,19 @@ import Rating from '../../components/rating'
 
 import styles from '../../styles/recipe.module.scss'
 
-function Page({ title, steps, splashPath, ingredients, id, score, reviews }) {
+function Page({ title, steps, splashPath, ingredients, id, score, reviews, creationDate, editDate }) {
 
     return (
         <div className={styles.container}>
-            <RecipeComponent id={id} title={title} steps={steps} splashPath={splashPath} ingredients={ingredients} rating={Math.round(score / reviews)} />
+            <RecipeComponent id={id} title={title} steps={steps} splashPath={splashPath} ingredients={ingredients} rating={Math.round(score / reviews)} creationDate={creationDate} editDate={editDate} />
         </div>
     )
 }
 
-function RecipeComponent({ id, title, steps, splashPath, ingredients, rating }) {
+function RecipeComponent({ id, title, steps, splashPath, ingredients, rating, creationDate, editDate }) {
     return (
         <div className={styles.recipeContainer}>
+            <div className={styles.dates}>Created on: {creationDate}<br />Last edit on: {editDate}</div>
             <Rating rating={rating} />
             <div className={styles.title}>{title}</div>
             <div className={styles.line} />
